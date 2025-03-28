@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import Modal from "../Modal";
 import CoinsLists from "../CoinsLists";
-import styles from "./PortfolioOverview.module.scss";
+import styles from "./portfolioOverview.module.scss";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import useWebSocket from "../../hooks/useWebSocket";
 import { IAsset, IWSAnswer } from "./types";
