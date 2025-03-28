@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+
+$primary-color: $primary-color;
+$primary-hover-color: $primary-hover-color;
+$background-dark: $background-dark;
+$background-main: #121212;
+$text-color: #ffffff;
+$border-color: $border-color;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: $background-dark;
+  border-bottom: 2px solid $border-color;
+}
+
+.header__logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.header__button {
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  background-color: $primary-color;
+  color: $background-dark;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $primary-hover-color;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 20px 20px 20px;
+  background-color: $background-main;
+
+  &__text {
+    color: $text-color;
+    font-size: 36px;
+    margin: auto;
+  }
+}

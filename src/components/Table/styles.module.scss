@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+$table-text-color: $text-color;
+$table-bg: $background-dark;
+$table-header-bg: #1e2026;
+$table-even-row-bg: #1c1f26;
+$table-odd-row-bg: $background-dark;
+$table-hover-bg: #222630;
+$border-color: $border-color;
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: $table-text-color;
+  background-color: $table-bg;
+
+  &__header {
+    font-size: 20px;
+    background-color: $table-header-bg;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  &__row {
+    cursor: pointer;
+
+    &:nth-child(even) {
+      background-color: $table-even-row-bg;
+    }
+
+    &:nth-child(odd) {
+      background-color: $table-odd-row-bg;
+    }
+
+    &:hover {
+      background-color: $table-hover-bg;
+      transition: background 0.2s ease-in-out;
+    }
+  }
+
+  &__cell,
+  &__header-cell {
+    padding: 12px;
+    border: none;
+    text-align: center;
+  }
+
+  &__header-cell {
+    font-weight: bold;
+    background-color: $table-header-bg;
+    border-bottom: 2px solid $border-color;
+  }
+}

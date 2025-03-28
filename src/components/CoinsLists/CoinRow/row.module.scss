@@ -1,0 +1,27 @@
+.coin-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.coin-row span:nth-child(1) {
+  text-align: left;
+}
+
+.coin-row span:nth-child(2) {
+  text-align: right;
+}
+
+.coin-row span:nth-child(3) {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
