@@ -64,7 +64,9 @@ export default function PortfolioOverview() {
         {dataTable.length === 0 && coins.length > 0 ? (
           <span className={styles["main-content__text"]}>Загрузка данных...</span>
         ) : dataTable.length > 0 ? (
-          <Table data={dataTable} columns={columns} rowClick={deleteRow} />
+          <div className={styles["table-wrapper"]}>
+            <Table data={dataTable} columns={columns} rowClick={deleteRow} />
+          </div>
         ) : (
           <span className={styles["main-content__text"]}>
             Нет активов в вашем портфеле. Добавьте что-нибудь, чтобы начать!
