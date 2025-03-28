@@ -6,6 +6,7 @@ $background-dark: $background-dark;
 $background-main: #121212;
 $text-color: #ffffff;
 $border-color: $border-color;
+$scrollbar-track: rgba(0, 0, 0, 0.3);
 
 .header {
   display: flex;
@@ -67,4 +68,21 @@ $border-color: $border-color;
   flex-direction: column;
   overflow-x: auto;
   width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-track;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 10px;
+    border: 2px solid $scrollbar-track;
+    transition: background-color 0.2s ease;
+  }
 }
