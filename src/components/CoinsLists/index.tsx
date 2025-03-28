@@ -80,6 +80,12 @@ export default function CoinsLists({ isOpen, closeModal }: SelectionCionsProps) 
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleAdd();
+    }
+  };
+
   const filteredCoins = useMemo(() => {
     return coins.filter((coin) => coin.symbol.toLowerCase().includes(filter.toLowerCase()));
   }, [coins, filter]);
@@ -129,6 +135,7 @@ export default function CoinsLists({ isOpen, closeModal }: SelectionCionsProps) 
             onChange={handleInputQuantity}
             className={styles.quantityInput}
             aria-label="Количество"
+            onKeyDown={handleKeyDown}
           />
           <span>
             Итого: {(parseFloat(selectedCoin?.lastPrice || "0") * Number(quantity)).toFixed(2)} $
